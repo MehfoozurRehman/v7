@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   color-scheme: light;
@@ -24,7 +24,7 @@
   --cursor-glow-soft: rgb(102 138 133 / 0.032);
 }
 
-:root[data-theme="dark"] {
+:root[data-theme='dark'] {
   color-scheme: dark;
   --color-page: #050507;
   --color-page-soft: #08090d;
@@ -87,15 +87,15 @@ body {
   display: none;
 }
 
-:root[data-theme="dark"] .theme-toggle-icon-light {
+:root[data-theme='dark'] .theme-toggle-icon-light {
   display: none;
 }
 
-:root[data-theme="dark"] .theme-toggle-icon-dark {
+:root[data-theme='dark'] .theme-toggle-icon-dark {
   display: block;
 }
 
-.cursor-highlight[data-visible="true"] {
+.cursor-highlight[data-visible='true'] {
   opacity: 1;
 }
 
