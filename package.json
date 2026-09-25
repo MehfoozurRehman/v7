@@ -3,16 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "node scripts/generate-cv-pdf.mjs && next build",
+    "dev": "node api.js && next dev",
+    "build": "node api.js && node scripts/generate-cv-pdf.mjs && next build",
     "generate:cv": "node scripts/generate-cv-pdf.mjs",
-    "start": "next start",
+    "start": "node api.js && next start",
     "deploy": "pnpm build && firebase deploy --only hosting"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "lucide-react": "^1.42.0",
-    "next": "16.3.4",
+    "next": "16.3.5",
     "pdfkit": "^0.20.1",
     "react": "19.2.8",
     "react-dom": "19.2.8",
