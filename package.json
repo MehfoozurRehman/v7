@@ -10,7 +10,7 @@
     "deploy": "pnpm build && firebase deploy --only hosting"
   },
   "dependencies": {
-    "@emailjs/browser": "^4.4.1",
+    "@emailjs/browser": "^5.0.2",
     "lucide-react": "^1.42.0",
     "next": "16.3.4",
     "pdfkit": "^0.20.1",
