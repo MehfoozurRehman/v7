@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@emailjs/browser':
-        specifier: ^4.4.1
-        version: 4.4.1
+        specifier: ^5.0.2
+        version: 5.0.2
       lucide-react:
         specifier: ^1.42.0
         version: 1.42.0(react@19.2.8)
@@ -58,8 +58,8 @@ packages:
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
 
-  '@emailjs/browser@4.4.1':
-    resolution: {integrity: sha512-DGSlP9sPvyFba3to2A50kDtZ+pXVp/0rhmqs2LmbMS3I5J8FSOgLwzY2Xb4qfKlOVHh29EAutLYwe5yuEZmEFg==}
+  '@emailjs/browser@5.0.2':
+    resolution: {integrity: sha512-yhfjhO6q6843CXUxZcJ5iw+HLtLvNbdt0wx/cJ6upREmD/biKoB7hAAO1HnYqhSH7owIUgwIbZOxSOblZyN3cQ==}
     engines: {node: '>=14.0.0'}
 
   '@emnapi/runtime@1.11.1':
@@ -887,7 +887,7 @@ snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
 
-  '@emailjs/browser@4.4.1': {}
+  '@emailjs/browser@5.0.2': {}
 
   '@emnapi/runtime@1.11.1':
     dependencies:
