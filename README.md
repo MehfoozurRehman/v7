@@ -1,54 +1,45 @@
-# Developer Portfolio v7
+# v7
 
-The personal developer portfolio, live GitHub contribution heatmaps, automated CV generator, and project showcase for Mehfooz-ur-Rehman built with Next.js 16 App Router, React 19, Tailwind CSS v4, and PDFKit.
+A personal developer portfolio built with Next.js: project case studies, a GitHub contribution calendar, a contact form, and a generated PDF CV.
 
-## Overview
+**Status:** Shipped. The site is complete across its pages and deploys to Firebase Hosting from GitHub Actions on merges. I did not check the live site.
 
-`v7` represents the latest portfolio release showcasing full-stack engineering work, live interactive GitHub calendar contributions (`react-github-calendar`), automated programmatic PDF curriculum vitae generation (`pdfkit`), EmailJS contact forms, and automated Firebase Hosting deployment.
+## The problem
 
-## Tech Stack
+A developer needs one public page that presents their services, projects, experience and contact details, and that a visitor can read on any device. The CV also needs to be available as a PDF, without being edited by hand each time. This project does both from one content file.
 
-- **Framework**: [Next.js](https://nextjs.org/) (v16 App Router)
-- **Frontend Core**: React 19, TypeScript
-- **Styling**: Tailwind CSS v4 (`@tailwindcss/postcss`)
-- **PDF Generation**: PDFKit (`pdfkit`, `scripts/generate-cv-pdf.mjs`)
-- **Visuals & Heatmaps**: `react-github-calendar`, Lucide Icons
-- **Email Service**: `@emailjs/browser`
-- **Hosting**: Firebase Hosting (`firebase.json`)
+## What it does
 
-## Prerequisites
+- **Portfolio home page:** profile, services, selected projects, experience, education, tech stack and testimonials, all read from `data.ts`.
+- **Case study pages:** one page per project at `/case-studies/[slug]`, pre-rendered at build time with `generateStaticParams`.
+- **GitHub activity:** a contribution calendar loaded with `react-github-calendar`.
+- **Contact form:** sends messages through EmailJS, with the service, template and public key read from environment variables.
+- **Generated CV:** `scripts/generate-cv-pdf.mjs` builds a PDF from `scripts/cv-content.mjs` before every build.
+- **Light and dark themes:** a theme toggle, with a script that sets the theme before the page paints.
 
-- Node.js (v20 or higher recommended)
-- Package manager (`pnpm` v11+ recommended)
+## How it's built
 
-## Getting Started
+- Next.js 16 App Router with `output: 'export'`, so the build produces a static site in `out/`.
+- React 19, TypeScript and Tailwind CSS v4. Icons from Lucide.
+- PDFKit writes the CV as a PDF, and `sharp` is a dev dependency for image work.
+- Content lives in typed exports in `data.ts` (`profile`, `projects`, `services`, `experience` and others), so the pages and the CV can share one source.
+- `firebase.json` serves the `out/` folder, and the workflows in `.github/workflows` deploy it. The merge workflow runs on pushes to `main`.
 
-1. **Install dependencies**:
-   ```bash
-   pnpm install
-   ```
+## Running it locally
 
-2. **Generate CV PDF**:
-   ```bash
-   pnpm generate:cv
-   ```
+Requires Node.js 20+ and pnpm 11. For the contact form, set `NEXT_PUBLIC_EMAILJS_PUBLIC_KEY`, `NEXT_PUBLIC_EMAILJS_SERVICE_ID` and `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID` in `.env.local`.
 
-3. **Run the Development Server**:
-   ```bash
-   pnpm dev
-   ```
+```bash
+pnpm install
+pnpm generate:cv   # writes the CV PDF
+pnpm dev           # http://localhost:3000
+```
 
-4. **Access the Portfolio**:
-   Open `http://localhost:3000` in your web browser.
+Other scripts: `pnpm build` (generates the CV, then builds the static site), `pnpm start`, and `pnpm deploy` (builds, then runs `firebase deploy --only hosting`, which needs a Firebase login).
 
-## Available Scripts
+## What's left
 
-- `pnpm dev` - Starts the Next.js development server.
-- `pnpm generate:cv` - Builds the PDF resume via PDFKit script.
-- `pnpm build` - Generates PDF resume and compiles Next.js production build.
-- `pnpm start` - Starts the production server.
-- `pnpm deploy` - Compiles and deploys directly to Firebase Hosting.
-
-## Author
-
-Created by [Mehfooz-ur-Rehman](https://github.com/MehfoozurRehman).
+- **Contact form needs keys:** without the three EmailJS variables the form cannot send anything. The keys are read from the build environment, so they are visible in the published bundle, which is normal for EmailJS public keys.
+- **No tests** are present.
+- **Content is in code:** adding a project or job means editing `data.ts` and redeploying.
+- **Dependabot is configured,** but no automated test runs before deploy beyond the build.
