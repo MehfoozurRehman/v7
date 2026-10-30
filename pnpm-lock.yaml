@@ -13,22 +13,22 @@ importers:
         version: 4.4.1
       lucide-react:
         specifier: ^1.42.0
-        version: 1.42.0(react@19.2.8)
+        version: 1.42.0(react@19.3.1)
       next:
         specifier: 16.3.4
-        version: 16.3.4(@types/node@26.5.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+        version: 16.3.4(@types/node@26.5.0)(react-dom@19.2.8(react@19.3.1))(react@19.3.1)
       pdfkit:
         specifier: ^0.20.1
         version: 0.20.1
       react:
-        specifier: 19.2.8
-        version: 19.2.8
+        specifier: 19.3.1
+        version: 19.3.1
       react-dom:
         specifier: 19.2.8
-        version: 19.2.8(react@19.2.8)
+        version: 19.2.8(react@19.3.1)
       react-github-calendar:
         specifier: ^5.0.9
-        version: 5.0.9(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+        version: 5.0.9(react-dom@19.2.8(react@19.3.1))(react@19.3.1)
     devDependencies:
       '@tailwindcss/postcss':
         specifier: ^4.3.3
@@ -37,11 +37,11 @@ importers:
         specifier: ^26.5.0
         version: 26.5.0
       '@types/react':
-        specifier: ^19.2.17
-        version: 19.2.17
+        specifier: ^19.3.0
+        version: 19.3.0
       '@types/react-dom':
         specifier: ^19.2.7
-        version: 19.2.7(@types/react@19.2.17)
+        version: 19.2.7(@types/react@19.3.0)
       sharp:
         specifier: ^0.35.3
         version: 0.35.3(@types/node@26.5.0)
@@ -591,8 +591,8 @@ packages:
     peerDependencies:
       '@types/react': ^19.2.0
 
-  '@types/react@19.2.17':
-    resolution: {integrity: sha512-MXfmqaVPEVgkBT/aY0aGCkRWWtByiYQXo3xdQ8r5RzuFrPiRn8Gar2tQdXSUQ2GKV3bkXckek89V8wQBY2Q/Aw==}
+  '@types/react@19.3.0':
+    resolution: {integrity: sha512-N0rFCuH9YoxG9/m61l9MfpJKfmLOVU0em7ipIz6TRgSSkvReLB9vL85GB+yr8Bs5leqpvg96JSwF4ZS1s4viQg==}
 
   base64-js@0.0.8:
     resolution: {integrity: sha512-3XSA2cR/h/73EzlXXdU6YNycmYI7+kicTxks4eJg2g39biHR84slg2+des+p7iHYhbRg/udIS4TD53WabcOUkw==}
@@ -803,8 +803,8 @@ packages:
     peerDependencies:
       react: ^18.0.0 || ^19.0.0
 
-  react@19.2.8:
-    resolution: {integrity: sha512-PWaYA1L/q9u2u7xYQi+Y3L3Yfnie7XyLeaJICV1MGD6LprsBxcAqGjYyr0eY3p+QdsA+x/Irkt4Qif8D63+Sbw==}
+  react@19.3.1:
+    resolution: {integrity: sha512-QNhWdt7nrgVWWQG58QuGsAR3jv3Hbe4mb4vz7w2csnHavciZJgda1CPNaldF6eVxv90ud3jUXpKlHL69gO38yw==}
     engines: {node: '>=0.10.0'}
 
   restructure@3.0.2:
@@ -908,18 +908,18 @@ snapshots:
       '@floating-ui/core': 1.8.0
       '@floating-ui/utils': 0.2.12
 
-  '@floating-ui/react-dom@2.1.9(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
+  '@floating-ui/react-dom@2.1.9(react-dom@19.2.8(react@19.3.1))(react@19.3.1)':
     dependencies:
       '@floating-ui/dom': 1.8.0
-      react: 19.2.8
-      react-dom: 19.2.8(react@19.2.8)
+      react: 19.3.1
+      react-dom: 19.2.8(react@19.3.1)
 
-  '@floating-ui/react@0.27.20(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
+  '@floating-ui/react@0.27.20(react-dom@19.2.8(react@19.3.1))(react@19.3.1)':
     dependencies:
-      '@floating-ui/react-dom': 2.1.9(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      '@floating-ui/react-dom': 2.1.9(react-dom@19.2.8(react@19.3.1))(react@19.3.1)
       '@floating-ui/utils': 0.2.12
-      react: 19.2.8
-      react-dom: 19.2.8(react@19.2.8)
+      react: 19.3.1
+      react-dom: 19.2.8(react@19.3.1)
       tabbable: 6.5.0
 
   '@floating-ui/utils@0.2.12': {}
@@ -1260,11 +1260,11 @@ snapshots:
     dependencies:
       undici-types: 8.9.0
 
-  '@types/react-dom@19.2.7(@types/react@19.2.17)':
+  '@types/react-dom@19.2.7(@types/react@19.3.0)':
     dependencies:
-      '@types/react': 19.2.17
+      '@types/react': 19.3.0
 
-  '@types/react@19.2.17':
+  '@types/react@19.3.0':
     dependencies:
       csstype: 3.2.3
 
@@ -1371,9 +1371,9 @@ snapshots:
       base64-js: 0.0.8
       unicode-trie: 2.0.0
 
-  lucide-react@1.42.0(react@19.2.8):
+  lucide-react@1.42.0(react@19.3.1):
     dependencies:
-      react: 19.2.8
+      react: 19.3.1
 
   magic-string@0.30.21:
     dependencies:
@@ -1383,16 +1383,16 @@ snapshots:
 
   nanoid@3.3.18: {}
 
-  next@16.3.4(@types/node@26.5.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8):
+  next@16.3.4(@types/node@26.5.0)(react-dom@19.2.8(react@19.3.1))(react@19.3.1):
     dependencies:
       '@next/env': 16.3.4
       '@swc/helpers': 0.5.23
       baseline-browser-mapping: 2.11.21
       caniuse-lite: 1.0.30001810
       postcss: 8.5.23
-      react: 19.2.8
-      react-dom: 19.2.8(react@19.2.8)
-      styled-jsx: 5.1.6(react@19.2.8)
+      react: 19.3.1
+      react-dom: 19.2.8(react@19.3.1)
+      styled-jsx: 5.1.6(react@19.3.1)
     optionalDependencies:
       '@next/swc-darwin-arm64': 16.3.4
       '@next/swc-darwin-x64': 16.3.4
@@ -1437,27 +1437,27 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  react-activity-calendar@3.2.1(react-dom@19.2.8(react@19.2.8))(react@19.2.8):
+  react-activity-calendar@3.2.1(react-dom@19.2.8(react@19.3.1))(react@19.3.1):
     dependencies:
-      '@floating-ui/react': 0.27.20(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      '@floating-ui/react': 0.27.20(react-dom@19.2.8(react@19.3.1))(react@19.3.1)
       date-fns: 4.4.0
-      react: 19.2.8
+      react: 19.3.1
     transitivePeerDependencies:
       - react-dom
 
-  react-dom@19.2.8(react@19.2.8):
+  react-dom@19.2.8(react@19.3.1):
     dependencies:
-      react: 19.2.8
+      react: 19.3.1
       scheduler: 0.27.0
 
-  react-github-calendar@5.0.9(react-dom@19.2.8(react@19.2.8))(react@19.2.8):
+  react-github-calendar@5.0.9(react-dom@19.2.8(react@19.3.1))(react@19.3.1):
     dependencies:
-      react: 19.2.8
-      react-activity-calendar: 3.2.1(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      react: 19.3.1
+      react-activity-calendar: 3.2.1(react-dom@19.2.8(react@19.3.1))(react@19.3.1)
     transitivePeerDependencies:
       - react-dom
 
-  react@19.2.8: {}
+  react@19.3.1: {}
 
   restructure@3.0.2: {}
 
@@ -1534,10 +1534,10 @@ snapshots:
 
   source-map-js@1.2.1: {}
 
-  styled-jsx@5.1.6(react@19.2.8):
+  styled-jsx@5.1.6(react@19.3.1):
     dependencies:
       client-only: 0.0.1
-      react: 19.2.8
+      react: 19.3.1
 
   tabbable@6.5.0: {}
 
