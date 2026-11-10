@@ -26,4 +26,6 @@ yarn-error.log*
 *.log
 .yarn
 /.firebase
-config.bat
+
+.env*
+!.env.example
